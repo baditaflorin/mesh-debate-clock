@@ -49,3 +49,140 @@ body,
   opacity: 0.6;
   font-variant-numeric: tabular-nums;
 }
+
+.dc-screen {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 5rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.dc-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+.dc-status {
+  margin: 0.25rem 0 0;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+.dc-name,
+.dc-input {
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--mesh-fg);
+  font-size: 1rem;
+  width: 100%;
+}
+.dc-side-row {
+  display: flex;
+  gap: 0.5rem;
+}
+.dc-side-pro,
+.dc-side-con {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--mesh-fg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 200ms;
+  opacity: 0.7;
+}
+.dc-side-pro.is-mine {
+  opacity: 1;
+  border-color: #64ff8c;
+}
+.dc-side-con.is-mine {
+  opacity: 1;
+  border-color: #ff6464;
+}
+.dc-start,
+.dc-log,
+.dc-end {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background: #ff6464;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.dc-log:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.dc-turn {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 0.8rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+}
+.dc-turn-pro {
+  color: #64ff8c;
+}
+.dc-turn-con {
+  color: #ff6464;
+}
+.dc-progress {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.dc-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #64ff8c, #ff6464);
+  transition: opacity 250ms;
+}
+.dc-input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+.dc-input-row .dc-input {
+  flex: 1;
+}
+.dc-transcript {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.dc-col-pro,
+.dc-col-con {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  padding: 0.6rem;
+  min-height: 6rem;
+}
+.dc-col-pro h3 {
+  margin: 0 0 0.5rem;
+  color: #64ff8c;
+  font-size: 0.9rem;
+}
+.dc-col-con h3 {
+  margin: 0 0 0.5rem;
+  color: #ff6464;
+  font-size: 0.9rem;
+}
+.dc-point {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 0.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 6px;
+  margin-bottom: 0.4rem;
+}
+.dc-author {
+  font-size: 0.75rem;
+  opacity: 0.65;
+}
+.dc-text {
+  font-size: 0.95rem;
+}
