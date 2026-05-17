@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import {
+  MeshNameInput,
   createClockSync,
   useEventLog,
   useMeshSlot,
@@ -84,13 +85,12 @@ function Body({ room, config }: { room: YRoom; config: MeshConfig }) {
         </p>
       </header>
 
-      <input
+      <MeshNameInput
         className="dc-name"
         value={name}
-        onChange={(e) => setName(e.target.value)}
+        onChange={setName}
         placeholder="your name"
         maxLength={32}
-        aria-label="your name"
       />
 
       <div className="dc-side-row" role="group" aria-label="pick side">
